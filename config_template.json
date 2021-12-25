@@ -1,0 +1,12 @@
+{
+  "openWeatherMap": {
+    "apiKey": ""
+  },
+  "twitter": {
+    "consumerKey": "",
+    "consumerSecret": "",
+    "bearerToken": "",
+    "accessToken": "",
+    "accessTokenSecret": ""
+  }
+}
