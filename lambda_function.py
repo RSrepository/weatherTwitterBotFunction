@@ -14,10 +14,8 @@ def lambda_handler(event, context):
                            config['twitter']['consumerSecret'], config['twitter']['accessToken'], config['twitter']['accessTokenSecret'])
     # 今日の天気情報を取得(東京都,名古屋市,大阪市からランダムで)
     weather = get_today_weather(config['openWeatherMap']['apiKey'])
-    # アイコン画像URLを設定
-    icon_url = 'http://openweathermap.org/img/w/' + weather['weather'][0]['icon'] + '.png';
     # ツイート
-    client.create_tweet(text=weather['name'] + weather['weather'][0]['main'],filename=icon_url)
+    client.create_tweet(text='Lambdaからツイート' + '\n' + weather['name'] + '\n' + weather['weather'][0]['main'])
 
 # 天気情報を取得するメソッド
 def get_today_weather(api_key):
